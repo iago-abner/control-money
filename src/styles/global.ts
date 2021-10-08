@@ -2,7 +2,7 @@ import {createGlobalStyle} from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     :root {
-        --background: #17181f;
+        --background: #FFF;
         --red: #E62E4D;
         --blue: #5429CC;
         --blue-light: #6933ff;
@@ -28,6 +28,15 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     //rem = 16px = tamanho da fonte .: rem adapta melhor aos diferentes tamanhos de tela
+
+    body, button, input, textarea{
+        font-family: 'Poppins', sans-serif;
+        font-weight: 400;
+    }
+
+    h1, h2, h3, h4, h5, h6, strong{
+        font-weight: 600;
+    }
 
     h1{
         color: #8257e6;
