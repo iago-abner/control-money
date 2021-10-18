@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0px;
         padding: 0px;
-        box-sizing: 0px;
+        box-sizing: border-box ;
     }
 
     //ajustando a fonte de acordo com o tamanho da tela:
@@ -57,31 +57,30 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     .react-modal-overlay{
-        background: rgba(0, 0, 0, 0.5);
-
         position: fixed;
         top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
-        left: 0;
-
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
     }
 
     .react-modal-content{
+        position: relative;
+        padding: 3rem;
         width: 100%;
         max-width: 576px;
         background: var(--background);
-        padding: 3rem;
         border-radius: 0.25rem;
-        position: relative;
     }
 
     .react-modal-close{
-        display: absolute;
-        margin-left: 34.5rem;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
         border: 0;
         background: transparent;
         transition: filter 0.2s;
