@@ -11,11 +11,17 @@ interface NewTransactionModalProps {
 }
 
 export function NewTransactionModal({ open, close }: NewTransactionModalProps) {
-
+  const [title, setTitle] = useState('');
+  const [value, setValue] = useState(0);
+  const [category, setCategory] = useState('');
   const [type, setType] = useState('');
 
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
+
+    console.log({
+      title, value, type, category
+    })
   }
 
   return (
@@ -38,10 +44,14 @@ export function NewTransactionModal({ open, close }: NewTransactionModalProps) {
         <input
           type="text"
           placeholder="Título"
+          value={title}
+          onChange={event => setTitle(event.target.value)}
         />
         <input
           type="number"
           placeholder="Valor"
+          value={value}
+          onChange={event => setValue(Number(event.target.value))}
         />
 
         <TransactionTypeContainer>
@@ -69,7 +79,10 @@ export function NewTransactionModal({ open, close }: NewTransactionModalProps) {
         <input
           type="text"
           placeholder="Categoria"
+          value={category}
+          onChange={event => setCategory(event.target.value)}
         />
+
         <button type="submit">Cadastrar</button>
       </Container>
     </Modal>
