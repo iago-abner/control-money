@@ -13,19 +13,27 @@ createServer({
       transactions:[
         {
           id: 1,
-          title: 'Desenvolvimento web',
+          title: 'Salário',
           type: 'deposit',
-          category: 'dev',
-          amount: 6000,
-          createdAt: new Date('2021-07-14 09:00:00'),
+          category: 'Trabalho',
+          amount: 3000,
+          createdAt: new Date('2021-07-21 09:00:00'),
         },
         {
           id: 2,
           title: 'Aluguel',
           type: 'withdraw',
           category: 'casa',
-          amount: 1000,
-          createdAt: new Date('2021-07-21 11:00:00'),
+          amount: 1100,
+          createdAt: new Date('2021-07-14 11:00:00'),
+        },
+        {
+          id: 3,
+          title: 'Feira',
+          type: 'withdraw',
+          category: 'compras',
+          amount: 700,
+          createdAt: new Date('2021-07-08 11:00:00'),
         }
       ],
     })

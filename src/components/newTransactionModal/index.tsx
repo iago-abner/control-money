@@ -1,5 +1,5 @@
-import { FormEvent, useContext, useState } from 'react';
-import { TransactionContext } from '../../transactionContext';
+import { FormEvent, useState } from 'react';
+import { useTransactions } from '../../hooks/useTransactions';
 import Modal from 'react-modal'
 
 import closeImg from '../../assets/close.svg'
@@ -14,7 +14,7 @@ interface NewTransactionModalProps {
 }
 
 export function NewTransactionModal({ open, close }: NewTransactionModalProps) {
-  const {createTransaction} = useContext(TransactionContext)
+  const {createTransaction} = useTransactions();
 
   const [title, setTitle] = useState('');
   const [amount, setAmount] = useState(0);
