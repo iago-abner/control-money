@@ -39,3 +39,13 @@ yarn start
 
 # Será inicializado em <http://localhost:3000>
 ```
+
+## License
+
+<a href="https://opensource.org/licenses/MIT">
+    <img alt="License" src="https://img.shields.io/github/license/iago-abner/dt-money.svg">
+</a>
+
+<br>
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
