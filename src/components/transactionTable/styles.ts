@@ -2,27 +2,36 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin-top: 3rem;
-    border-radius: 0.3rem;
+    td:first-child { 
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem 
+    }
+    td:last-child { 
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+    }
+
     table{
         width: 100%;
         line-height:3rem;
         border-spacing: 0 0.5rem;
-
+        border-collapse: separate;
+        
         th{
             text-align: left;
             padding: 1rem 2rem;
-            font-weight: 400;
-            color: var(--text-body);
+            font-weight: 500;
+            color: var(--text-title);            
             line-height: 1.5rem;
+            
         }
 
         td{
             text-align: left;
             padding: 1rem 2rem;
-            border:0;
             background: var(--shape);
             color: var(--text-body);
-            border-radius: 0.25rem;
+           
 
             &:first-child{
                 color: var(--text-title);

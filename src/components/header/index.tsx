@@ -1,5 +1,5 @@
 import Modal from 'react-modal'; 
-import logoImg from '../../assets/logo.svg'
+import logoImg from '../../assets/Logo.svg'
 import { Container, Content } from './styles';
 
 interface HeaderProps{
